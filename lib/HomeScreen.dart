@@ -2,7 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:vegcartui/blogPosts.dart';
 import 'package:vegcartui/carousel.dart';
+import 'package:vegcartui/imageContainer.dart';
+import 'package:vegcartui/review.dart';
+import 'package:vegcartui/sellingproduct.dart';
 import 'package:vegcartui/vegGrid.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -166,27 +170,98 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             VegGrid(),
+            Divider(),
+            Container(
+              height: 160,
+              padding: EdgeInsets.all(10),
+              child: Image.network(
+                "https://images.pexels.com/photos/3669640/pexels-photo-3669640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                fit: BoxFit.cover,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Text(
+                "best selling products",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic),
+              ),
+            ),
+            SellingProduct(),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey)),
+                height: 40,
+                child: Center(
+                    child:
+                        TextButton(onPressed: () {}, child: Text("VIEW MORE"))),
+              ),
+            ),
+            Divider(),
+            ImageContainer(),
+            Divider(),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                "Our Blog Posts",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            BlogPost(),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey)),
+                height: 40,
+                child: Center(
+                    child:
+                        TextButton(onPressed: () {}, child: Text("VIEW MORE"))),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                "What Our Customer Says?",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            ReviewSWcreen(),
           ]))
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.green,
+        currentIndex: 0,
+        selectedIconTheme: IconThemeData(color: Colors.green),
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home,
-                color: Colors.green,
+                // color: Colors.black,
               ),
               label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.shopping_cart,
-                color: Colors.green,
+                //  color: Colors.black,
               ),
               label: 'Cart'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.person,
-                color: Colors.green,
+                //  color: Colors.black,
               ),
               label: 'Account')
         ],

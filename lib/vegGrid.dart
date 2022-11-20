@@ -8,9 +8,10 @@ class VegGrid extends StatelessWidget {
     'https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600',
     "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=600",
     "https://images.pexels.com/photos/89778/strawberries-frisch-ripe-sweet-89778.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/1435737/pexels-photo-1435737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        "https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/531446/pexels-photo-531446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    "https://images.pexels.com/photos/1435737/pexels-photo-1435737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/531446/pexels-photo-531446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    //"https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&w=600"
   ];
   List names = [
     "Vegitables",
@@ -19,6 +20,7 @@ class VegGrid extends StatelessWidget {
     "Fresh Cuts",
     "Nutrition Chargers",
     "Packed Flavors",
+    // "Gourmet salad"
   ];
 
   //const VegGrid({super.key});
@@ -30,7 +32,7 @@ class VegGrid extends StatelessWidget {
         padding: EdgeInsets.all(10),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, crossAxisSpacing: 20, mainAxisSpacing: 20),
-        itemCount: img.length,
+        itemCount: names.length,
         itemBuilder: (BuildContext, int index) {
           return Container(
             decoration: BoxDecoration(
